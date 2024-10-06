@@ -1,10 +1,53 @@
-/* styles.css */ 
+/* Colors: 
+        Green: A5B68D
+        Beigne-almost-white: FCFAEE
+        Orange: DA8359
+*/
+/* .pattern-body {
+    margin-left: 50px;
+    margin-right: 50px;
+} */
 
-div {
-    color: wheat;
-    background-color: blueviolet;
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #FCFAEE;
+
 }
 
-p {
-    color: green;
+.centered {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+h1 {
+    font-weight: bolder;
+    background-color: #A5B68D;
+    width: 100%;
+    block-size: 100px;
+    align-content: center;
+    border-block-width: 10px;
+    border-block-style: ridge;
+    border-block-color: #c2ccb5;
+
+}
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: stretch ;
+    padding: 8px;
+    gap: 1em;
+    border: none;
+    color: #faeac3;
+    background-color: #9b9b7a;
+    border-radius: 10px;
+    font-variant: small-caps;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    float: inline-end;
+    letter-spacing: 2px;
+}
+
