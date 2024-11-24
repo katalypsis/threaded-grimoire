@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    background-color: #A5B68D;
+    margin: 0;
+    padding: 0;
+    /* border: solid 1px red; */
+    
+    
+}
+
+.main-actions {
+    width: 120px;
+    height: 40px;
+    border: double 1px #A5B68D;
+    background-color: #FEFAE0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    font-size: medium;
+    color: #3a4b41;
+    padding-inline: 70px;
+    margin: 5px 15px;
+    border-radius: 2px;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+}
+
+.main-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-block: 60px;
+    padding: 5px 50px;
+    
+    
+}
+
+.main-menus {
+    display: flex;
+    flex-direction: column;    
+    background-color: #FEFAE0;
+    padding: 60px 40px;    
+    
+}
+
+
+.logo {
+    margin-block: 50px;
+    font-size: large;
+    color: #2b3831;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    row-gap: 30px;
+}
+
+.logo h1 {
+    font-family: "Amatic SC", sans-serif;;
+    text-wrap: nowrap;
+    font-size: 300%;
+}
+
+.logo img {
+    width: 40%;
+    height: auto;   
+    display: block;
+}
+
+.logo p {
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+}

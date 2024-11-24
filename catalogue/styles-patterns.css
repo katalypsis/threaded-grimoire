@@ -1,0 +1,98 @@
+/* Colors: 
+        Green: A5B68D
+        Beigne-almost-white: FCFAEE
+        Orange: DA8359
+*/
+/* .pattern-body {
+    margin-left: 50px;
+    margin-right: 50px;
+} */
+* {
+    background-color: #FCFAEE;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.pattern-body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 60%;
+    margin: 2rem;
+    padding: 1.5rem;
+    align-content: center;
+}
+
+.centered {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin: 3rem;
+    width: 90%;
+    block-size: 100px;
+    align-content: center;
+    border-block-width: 10px;
+    border-block-style: ridge;
+    border-block-color: #c2ccb5;
+    font-weight: bolder;
+    background-color: #A5B68D;
+    border-radius: 10px;
+    outline: 14x solid #000;
+    outline-offset: 0.25rem;
+}
+
+/*
+.menu-top {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5em;
+    border: none;
+    color: #faeac3;
+    background-color: #9b9b7a;
+    border-radius: 10px;
+    font-variant: small-caps;
+    font-weight: bold;
+    float: inline-end;
+    letter-spacing: 0.2rem;
+}
+*/  
+
+.top-menu {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    /* button's placement within top-menu flexbox */
+    justify-content: flex-start;
+
+    align-items: center;
+    /* Align-content: set how multiple lines are spaced apart from each other. */
+    align-content: center;
+    flex-direction: row-reverse;
+    /* Spread buttons if squeezed when page page smaller so they don't stand out of the top-menu flexbox */
+    flex-wrap: wrap;  
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.3em 0.75em;
+    background-color: #A5B68D;
+    border-radius: 5%;
+    color: #000;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-shrink: inherit;
+}
+
+
+
