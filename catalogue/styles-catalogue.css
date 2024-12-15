@@ -1,42 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 * {
-    background-color: #FEFAE0;
+    background: #A5B68D;
     margin: 0;
     padding: 0;
-    border: solid 1px red;
-}
+    /* border: solid 1px red; */
+    border: solid 1px #A5B68D;
+    color: #333;
+    white-space: nowrap;
+    }
 
-.patterns-titles {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+h1 {
+    position: relative;
+    padding: 0;
+    margin-top: 90px;
+    margin-inline: 80px;
+    font-size: 50px;
+    color: #080808;
+    text-align:center; 
+    text-transform:uppercase; 
+    color:#222; 
+    letter-spacing:1.5px;
+    font-family:"Playfair Display", serif;
+    font-weight:400;
+    /* font-family: "Raleway", sans-serif; */
+    }
 
-.patterns-titles-names {
-    width: 120px;
-    height: 40px;
-    border: dotted 2px #A5B68D;
-    background-color: #FEFAE0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100;
-    font-size: medium;
+h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+    margin-top: 5px;
+    font-size:15px; 
+    color:#444; 
+    word-spacing:1px; 
+    font-weight:normal; 
+    letter-spacing:2px;
+    text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+    }
+
+.title h1 span:after,.title h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 0.5px solid #faeac3;
+    border-top: 1px solid #faeac3;
+    height: 3px;
+    background-color:  #A5B68D;
+    }
+
+h1 em {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+/* .title {
+    font-family: "Amatic SC", sans-serif;
     color: #3a4b41;
-    padding-inline: 70px;
-    margin: 5px 15px;
-    border-radius: 2px;
-    text-align: center;
-    align-content: center;
-    text-decoration: none;
+    font-size: 4rem; 
     text-wrap: nowrap;
-}
+    font-size: 300%;
+    text-align: center;
+    margin: 50px auto;
+    letter-spacing: 2px;
+    padding: 20px 0;
 
+    } */
+
+
+
+/* Buttons */
 .button {
-    box-sizing: content-box;
-    display: inline-block;
+    /* box-sizing: content-box; */
+    /* display: inline-block; */
     justify-items: baseline;
     align-items: baseline;
+    margin: 0.5rem;
+    /* flex: 1; */
     gap: 1em;
-    color: #faeac3;
-    background-color: #9b9b7a;
+    background-color: #faeac3;
+    color: #3a4b41;
     border-radius: 25px;
     padding: 8px;
     padding-left: 15px;
@@ -44,46 +92,120 @@
     border: none;
     font-variant: small-caps;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
     list-style: none;
     text-decoration: none;
     float: inline-end;
     letter-spacing: 2px;
     justify-content: space-evenly;
-    /* display: flex;
-    flex-direction: row;
-    padding-inline: 70px;
-    padding: 10px 50px;
-    margin: 5px 15px;
-    text-align: center;
-    align-content: center;
-    text-decoration: none;
-    border: double 1px #A5B68D;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100;
-    font-size: medium;
-    color: #3a4b41; */
-}
+    transition: all 0.5s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    }
 
-.buttons-menu {
-    display: flex;
-    margin: 1rem;
-    padding: 1rem;
-    gap: 0.1rem;
-    /* button's placement within top-menu flexbox */
-    justify-content: flex-start;
+.button:hover {
+    background: #faeac3;
+    color: #9b9b7a;
+    transform: translateY(-3px); /* Slight hover lift effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+
+/* Grid container */
+
+.patterns-grid {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Gap between grid items */
+    justify-items: center; /* Center items horizontally */
     align-items: center;
-    /* Align-content: set how multiple lines are spaced apart from each other. */
-    align-content: center;
-    flex-direction: row-reverse;
-    /* Spread buttons if squeezed when page page smaller so they don't stand out of the top-menu flexbox */
-    flex-wrap: wrap;  
+    padding: 20px;
 }
 
+.individual-patterns-grid {
+    display: contents; /* Ensure grid container works properly */
+}
 
-.title {
-    font-family: "Amatic SC", sans-serif;;
-    text-wrap: nowrap;
-    font-size: 300%;
+/* Figure styling */
+
+.patterns-grid figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* Fixed width for uniform size */
+    height: 250px; /* Fixed height to include both image and text */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure no content spills out */
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.patterns-grid figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+
+.patterns-grid img {
+    width: 100%; /* Image takes full width */
+    height: 80%; /* Image takes 80% of figure height */
+    object-fit: cover; /* Zoom/crop image to fill space proportionally */
+    border-bottom: 3px solid #9b9b7a; /* Subtle border under the image */
+    transition: all 0.3s ease;
+}
+
+.patterns-titles-names {
+    height: 20%; /* Text section takes 20% of figure height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3a4b41;
+    background: #FEFAE0; /* Background for text section */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
+
+.patterns-titles-names:hover {
+    background-color: #9b9b7a; /* Slight color change on hover */
+    color: #faeac3;
+    transition: all 0.3s ease;
+}
+
+/* Wrapper */
+
+.patterns-wrapper {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .patterns-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .patterns-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .patterns-grid {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+}
+
+
